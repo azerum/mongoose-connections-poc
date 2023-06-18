@@ -1,0 +1,14 @@
+{
+    "$schema": "file:///Users/user/src/fork/node-safe/schema/node-safe.schema.json",
+
+    "node": {
+        "allow-read": "/usr/local/**,~/Library/pnpm/**,~/.node-safe/**,~/.npmrc,/,.,..,~/package-lock.json",
+        "allow-read-write": "~/.node_repl_history,./**,~/.rush/**,/var/folders/**,~/.npm/**",
+        "allow-run": true,
+        "allow-net": true,
+
+        "custom": [
+            "(allow process-exec (with no-sandbox) (literal \"/bin/ps\"))"
+        ]
+    }
+}
